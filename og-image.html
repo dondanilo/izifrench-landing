@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1200px; height: 630px; overflow: hidden; font-family: 'Arial', sans-serif; background: linear-gradient(135deg, #000091 0%, #14146b 60%, #0f0f1a 100%); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 60px 80px; position: relative; }
+  .logo { font-size: 32px; font-weight: 900; color: white; margin-bottom: 24px; letter-spacing: -0.5px; }
+  .logo span { opacity: 0.7; }
+  h1 { font-size: 72px; font-weight: 900; color: white; line-height: 1.05; margin-bottom: 28px; }
+  .sub { font-size: 26px; color: rgba(255,255,255,0.8); margin-bottom: 44px; }
+  .pills { display: flex; gap: 14px; margin-bottom: 44px; flex-wrap: wrap; }
+  .pill { background: rgba(255,255,255,0.15); color: white; border: 1.5px solid rgba(255,255,255,0.3); border-radius: 50px; padding: 10px 22px; font-size: 18px; font-weight: 700; }
+  .badge { display: inline-block; background: white; color: #000091; border-radius: 50px; padding: 12px 28px; font-size: 20px; font-weight: 900; letter-spacing: 0.3px; }
+  .stripe { position: absolute; right: 0; top: 0; bottom: 0; width: 18px; }
+  .stripe.white { right: 18px; background: #fff; }
+  .stripe.red { right: 0; background: #E1000F; }
+  .flag { font-size: 80px; position: absolute; right: 110px; top: 50%; transform: translateY(-50%); opacity: 0.9; }
+</style>
+</head>
+<body>
+  <div class="logo">🇫🇷 IziFrench</div>
+  <h1>Французский язык<br>для жизни во Франции</h1>
+  <p class="sub">10 минут в день — говори уверенно уже через месяц</p>
+  <div class="pills">
+    <div class="pill">🛒 Супермаркет</div>
+    <div class="pill">📋 Préfecture</div>
+    <div class="pill">🏥 Врач</div>
+    <div class="pill">🏦 Банк</div>
+  </div>
+  <div class="badge">🎁 7 дней бесплатно · izifrench.com</div>
+  <div class="flag">⚜️</div>
+  <div class="stripe white"></div>
+  <div class="stripe red"></div>
+</body>
+</html>
