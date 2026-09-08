@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=XXXXXXX', 'ym');
+    ym(XXXXXXX, 'init', {ssr:true, webvisor:true, clickmap:true, accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/XXXXXXX" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Интервальное повторение для изучения французского: метод SRS | IziFrench</title>
+  <meta name="description" content="Как работает интервальное повторение (SRS), кривая забывания Эббингауза и алгоритм SM-2. Как применять метод к французским словам, фразам и глаголам, и какие ошибки его ломают.">
+  <link rel="canonical" href="https://izifrench.com/blog/intervalnoe-povtorenie.html">
+  <meta property="og:title" content="Интервальное повторение для изучения французского: метод SRS">
+  <meta property="og:description" content="Как работает интервальное повторение (SRS), кривая забывания Эббингауза и алгоритм SM-2. Как применять метод к французским словам, фразам и глаголам, и какие ошибки его ломают.">
+  <meta property="og:url" content="https://izifrench.com/blog/intervalnoe-povtorenie.html">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://izifrench.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.75; color: #333; background: #fff; }
+    .content { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+    h1 { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 38px; line-height: 1.2; color: #1a1a2e; margin: 32px 0 16px; }
+    h2 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 26px; margin-top: 48px; margin-bottom: 16px; color: #1a1a2e; }
+    h3 { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 20px; color: #1a1a2e; margin: 32px 0 12px; }
+    p { margin-bottom: 16px; }
+    a { color: #000091; }
+    ul, ol { padding-left: 24px; margin-bottom: 16px; }
+    li { margin-bottom: 8px; }
+    .breadcrumb { font-size: 14px; color: #888; margin: 20px 0 8px; }
+    .breadcrumb a { color: #888; text-decoration: none; }
+    .breadcrumb a:hover { color: #000091; }
+    .reading-time { display: inline-block; background: #E8E8F7; color: #000091; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .toc { background: #f8f9fa; border-radius: 12px; padding: 20px 24px; margin: 32px 0; }
+    .toc h3 { margin: 0 0 12px; font-size: 17px; }
+    .toc ol { margin: 0; }
+    table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 16px; }
+    thead th { background: #000091; color: white; padding: 12px 16px; text-align: left; font-family: 'Nunito', sans-serif; font-weight: 700; }
+    tbody tr:nth-child(odd) { background: #f8f9fa; }
+    tbody tr:nth-child(even) { background: white; }
+    tbody td { padding: 10px 16px; border-bottom: 1px solid #eee; }
+    tbody td:first-child { font-size: 18px; font-weight: 700; color: #000091; font-family: 'Nunito', sans-serif; }
+    .table-wrap { overflow-x: auto; }
+    .phrase-card { border-left: 4px solid #000091; background: #f8f9fa; padding: 16px 20px; margin: 16px 0; border-radius: 0 8px 8px 0; }
+    .phrase-card .fr { font-size: 19px; font-weight: 600; color: #1a1a2e; }
+    .phrase-card .transcription { color: #000091; font-style: italic; font-size: 15px; }
+    .phrase-card .translation { color: #333; }
+    .info-box { background: #E8E8F7; border: 1px solid #b9b9e6; border-radius: 12px; padding: 20px 24px; margin: 32px 0; }
+    .info-box h3 { margin-top: 0; color: #000091; }
+    .warning-box { background: #fff1f1; border: 1px solid #f5b8bc; border-radius: 12px; padding: 20px 24px; margin: 32px 0; }
+    .warning-box h3 { margin-top: 0; color: #a02020; }
+    .cta-box { background: linear-gradient(135deg, #000091 0%, #3D3DD1 100%); border-radius: 16px; padding: 32px; text-align: center; margin: 48px 0; }
+    .cta-box p { margin-bottom: 16px; color: #dcdcf5; }
+    .cta-btn { background: #fff; color: #000091; padding: 14px 32px; border-radius: 50px; font-family: 'Nunito', sans-serif; font-weight: 800; text-decoration: none; font-size: 17px; display: inline-block; }
+    .faq-list { margin: 24px 0; }
+    .faq-item { border-left: 3px solid #000091; padding: 4px 0 4px 20px; margin-bottom: 24px; }
+    .faq-item h3 { margin: 0 0 8px; font-size: 18px; }
+    .faq-item p { margin: 0; color: #444; }
+    .related-links { background: #f8f9fa; border-radius: 12px; padding: 24px; margin: 48px 0; }
+    .related-links h3 { margin-top: 0; }
+    @media (max-width: 600px) { h1 { font-size: 28px; } table { font-size: 14px; } tbody td:first-child { font-size: 15px; } }
+</style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Интервальное повторение для изучения французского: метод SRS",
+      "description": "Как работает интервальное повторение (SRS), кривая забывания Эббингауза и алгоритм SM-2. Как применять метод к французским словам, фразам и глаголам, и какие ошибки его ломают.",
+      "url": "https://izifrench.com/blog/intervalnoe-povtorenie.html",
+      "datePublished": "2026-09-08",
+      "dateModified": "2026-09-08",
+      "inLanguage": "ru",
+      "author": {
+        "@type": "Organization",
+        "name": "IziFrench"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "IziFrench",
+        "url": "https://izifrench.com"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Что такое интервальное повторение простыми словами?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Это система, которая показывает вам слово ровно в тот момент, когда вы вот-вот его забудете. Хорошо знакомые слова всплывают всё реже, трудные — чаще. За счёт этого вы тратите время только на то, что действительно рискуете потерять."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько новых слов в день добавлять?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Разумный старт — 10–15 новых карточек в день. При 20 новых в день через месяц накапливается около 150–200 повторений ежедневно, и большинство людей на этом сгорают. Лучше меньше, но без пропусков."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Что делать, если накопился завал повторений?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Не пытайтесь закрыть всё за один день. Поставьте новые карточки на паузу и разбирайте по 50–70 повторений в день, пока очередь не рассосётся. Полный сброс прогресса — худшее решение: вы потеряете уже сделанную работу."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Работает ли SRS для грамматики и фраз?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, но карточка должна проверять применение, а не определение. Вместо «что такое passé composé» — карточка «Я поел (avoir + manger)» с ответом «J'ai mangé». Формулируйте карточку как задачу, которую вы решаете, а не как справку."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Чем SRS лучше обычной зубрёжки?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Экономией. Эксперименты с интервальным повторением стабильно показывают, что на удержание того же объёма материала уходит в разы меньше времени, чем при массированном повторении, — потому что вы не тратите усилия на то, что и так помните."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли учить только по карточкам?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. Карточки строят словарный запас и пассивное узнавание, но не учат слышать и говорить. Рабочая пропорция: примерно треть времени на карточки, остальное на аудирование, чтение и диалоги."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "IziFrench",
+          "item": "https://izifrench.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Блог",
+          "item": "https://izifrench.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Интервальное повторение для изучения французского: метод SRS",
+          "item": "https://izifrench.com/blog/intervalnoe-povtorenie.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+<nav style="background:white;border-bottom:1px solid #e5e5e5;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;">
+  <a href="https://izifrench.com" style="font-family:Nunito,sans-serif;font-weight:900;font-size:22px;color:#1a1a2e;text-decoration:none;">🇫🇷 IziFrench</a>
+  <a href="https://izifrench.lemonsqueezy.com/checkout/buy/MONTHLY_PRODUCT_ID" style="background:#000091;color:#fff;padding:10px 20px;border-radius:50px;font-family:Nunito,sans-serif;font-weight:700;text-decoration:none;font-size:15px;">Попробовать бесплатно</a>
+</nav>
+
+<div class="content">
+  <div class="breadcrumb">
+    <a href="https://izifrench.com">IziFrench</a> › <a href="/blog/">Блог</a> › Интервальное повторение для изучения французского: метод SRS
+  </div>
+
+  <h1>Интервальное повторение для изучения французского: метод SRS</h1>
+  <span class="reading-time">⏱ 10 минут чтения</span>
+
+  <p>Вы учите двадцать французских слов. Через неделю помните пять. Это не проблема памяти — так работает мозг у всех. Вопрос в том, что с этим делать: зубрить те же слова заново или встроить повторение в правильные моменты.</p>
+
+  <p>Интервальное повторение (spaced repetition, SRS) — это второй путь. Метод старый, хорошо измеренный и особенно удобный для французского с его большим объёмом лексики.</p>
+
+  <div class="toc"><h3>Что в статье</h3><ol><li>Кривая забывания: почему всё выветривается</li><li>Идея интервального повторения</li><li>Как устроен алгоритм SM-2</li><li>Что класть на карточку по французскому</li><li>Отдельно: глаголы и спряжения</li><li>Сколько новых карточек в день</li><li>Пять ошибок, которые ломают метод</li><li>Где SRS не работает</li><li>Как встроить в день</li></ol></div>
+
+  <h2>Кривая забывания: почему всё выветривается</h2>
+  <p>В конце XIX века Герман Эббингауз ставил опыты на себе: заучивал бессмысленные слоги и замерял, сколько остаётся через час, день, неделю. Получилась кривая, которая с тех пор подтверждалась многократно.</p>
+
+  <div class="table-wrap"><table><thead><tr><th>Прошло</th><th>Остаётся в памяти (без повторения)</th></tr></thead><tbody><tr><td>20 минут</td><td>около 60%</td></tr><tr><td>1 час</td><td>около 45%</td></tr><tr><td>1 день</td><td>около 33%</td></tr><tr><td>6 дней</td><td>около 25%</td></tr><tr><td>31 день</td><td>около 21%</td></tr></tbody></table></div>
+
+  <p>Ключевой момент: <strong>каждое своевременное повторение делает кривую положе</strong>. После первого повторения слово держится не день, а три. После второго — неделю. После пятого — месяцы.</p>
+
+  <h2>Идея интервального повторения</h2>
+  <p>Если повторять слишком часто — тратите время впустую на то, что и так помните. Если слишком редко — забываете и учите заново. SRS ищет золотую середину: показать карточку в момент, когда вы её почти забыли, но ещё можете вытащить с усилием.</p>
+
+  <p>Именно это усилие вспоминания и укрепляет след. Поэтому пассивное перечитывание списка слов работает плохо, а попытка вспомнить перевод до подглядывания — хорошо.</p>
+
+  <div class="info-box"><h3>💡 Эффект тестирования</h3><p>Психологи называют это testing effect: попытка вспомнить закрепляет материал сильнее, чем повторное прочтение того же материала. Отсюда практический вывод — карточка должна заставлять вас <strong>вспоминать</strong>, а не узнавать из списка вариантов.</p></div>
+
+  <h2>Как устроен алгоритм SM-2</h2>
+  <p>Большинство приложений (включая наше) используют вариант алгоритма SM-2. Логика простая: у каждой карточки есть интервал и коэффициент лёгкости.</p>
+
+  <div class="table-wrap"><table><thead><tr><th>Ваш ответ</th><th>Что происходит с интервалом</th></tr></thead><tbody><tr><td>Не вспомнил</td><td>Сброс: карточка возвращается сегодня же</td></tr><tr><td>Вспомнил с трудом</td><td>Интервал растёт слабо, лёгкость снижается</td></tr><tr><td>Вспомнил</td><td>Интервал умножается на коэффициент (обычно ~2,5)</td></tr><tr><td>Легко</td><td>Интервал растёт быстрее, лёгкость повышается</td></tr></tbody></table></div>
+
+  <p>Типичная последовательность для слова, которое вы стабильно вспоминаете: сегодня → через 1 день → через 6 дней → через 15 → через 38 → через 3 месяца. Трудное слово застревает в начале и мозолит глаза, пока не выучится.</p>
+
+  <h2>Что класть на карточку по французскому</h2>
+  <p>Качество карточки решает больше, чем алгоритм. Три правила:</p>
+
+  <p><strong>1. Одна карточка — одна мысль.</strong> Не «глагол prendre со всеми значениями», а отдельно «prendre — брать» и «prendre le métro — ехать на метро».</p>
+
+  <p><strong>2. Контекст обязателен.</strong> Голое слово вспоминается плохо, слово во фразе — хорошо.</p>
+
+  <div class="table-wrap"><table><thead><tr><th>Плохая карточка</th><th>Хорошая карточка</th></tr></thead><tbody><tr><td>dossier — досье</td><td>Il manque un document dans mon dossier — В моём деле не хватает документа</td></tr><tr><td>rendez-vous — встреча</td><td>J'ai un rendez-vous à 14h — У меня приём в 14:00</td></tr><tr><td>falloir — быть нужным</td><td>Il faut prendre un rendez-vous — Нужно записаться</td></tr><tr><td>même — тот же</td><td>C'est la même chose — Это одно и то же</td></tr></tbody></table></div>
+
+  <p><strong>3. Направление важно.</strong> Карточка «французский → русский» тренирует понимание, «русский → французский» — говорение. Для активного словаря нужно второе, и оно заметно труднее.</p>
+
+  <div class="warning-box"><h3>⚠️ Не учите слово без артикля</h3><p>Карточка <em>table — стол</em> закрепляет слово без рода, и потом вы будете гадать. Пишите <strong>une table</strong>. Переучивать род задним числом дороже, чем выучить сразу.</p></div>
+
+  <h2>Отдельно: глаголы и спряжения</h2>
+  <p>Спряжения — самая большая опасность для карточек: их легко превратить в бессмысленную таблицу, которую вы вызубрите и не сможете применить.</p>
+
+  <p>Рабочий подход — карточка на форму в предложении:</p>
+
+    <div class="phrase-card">
+    <div class="fr">Вчера я поел в кафе.</div>
+    <div class="transcription">J'ai mangé au café.</div>
+    <div class="translation">passé composé с avoir</div>
+  </div>
+    <div class="phrase-card">
+    <div class="fr">Вчера я пошёл в кино.</div>
+    <div class="transcription">Je suis allé au cinéma.</div>
+    <div class="translation">passé composé с être — движение</div>
+  </div>
+    <div class="phrase-card">
+    <div class="fr">Мы поедем в Париж.</div>
+    <div class="transcription">Nous irons à Paris.</div>
+    <div class="translation">futur simple, неправильный корень ir-</div>
+  </div>
+
+  <p>Такая карточка проверяет ровно то, что вам нужно в речи: собрать правильную форму под конкретный смысл.</p>
+
+    <div class="cta-box">
+    <p style="font-family:Nunito,sans-serif;font-size:20px;font-weight:800;color:#fff;">SRS уже встроен в приложение</p>
+    <p style="color:#c3c3ee;font-size:16px;">Слова, фразы и глаголы сами возвращаются в нужный момент — считать интервалы не надо</p>
+    <a href="https://izifrench.lemonsqueezy.com/checkout/buy/MONTHLY_PRODUCT_ID" class="cta-btn">Начать бесплатно →</a>
+  </div>
+
+  <h2>Сколько новых карточек в день</h2>
+  <div class="table-wrap"><table><thead><tr><th>Новых в день</th><th>Повторений через месяц</th><th>Кому подходит</th></tr></thead><tbody><tr><td>5</td><td>около 50</td><td>Занятой график, 10 минут в день</td></tr><tr><td>10</td><td>около 100</td><td>Оптимум для большинства</td></tr><tr><td>15</td><td>около 150</td><td>Плотное обучение, 25–30 минут</td></tr><tr><td>20+</td><td>200+</td><td>Только при подготовке к экзамену с дедлайном</td></tr></tbody></table></div>
+
+  <p>Соблазн взять 30 новых слов в день на старте есть у всех. Через три недели очередь повторений становится неподъёмной, и человек бросает — не потому, что тяжело учить, а потому что тяжело <em>догонять</em>.</p>
+
+  <h2>Пять ошибок, которые ломают метод</h2>
+  <ol>
+    <li><strong>Пропуски по несколько дней.</strong> Очередь копится нелинейно: три пропущенных дня дают не тройную, а куда более тяжёлую сессию.</li>
+    <li><strong>Двусторонние карточки без нужды.</strong> Удваивают объём. Начните с одного направления, добавьте второе для активного ядра.</li>
+    <li><strong>Слишком длинные карточки.</strong> Если на обороте абзац, вы не вспоминаете, а перечитываете.</li>
+    <li><strong>Честность «на глазок».</strong> Отмечать «легко» там, где вспомнили с трудом, — способ обмануть алгоритм и потерять слово.</li>
+    <li><strong>Только карточки.</strong> Пассивный словарь растёт, речь — нет.</li>
+  </ol>
+
+  <div class="info-box"><h3>💡 Правило пяти секунд</h3><p>Если ответ не пришёл за пять секунд — считайте, что не вспомнили. В реальном разговоре у вас будет ровно столько времени. Занижать себе оценку полезнее, чем завышать.</p></div>
+
+  <h2>Где SRS не работает</h2>
+  <p>Метод отлично строит словарь и удерживает грамматические шаблоны. Но он не заменяет:</p>
+  <ul>
+    <li><strong>Аудирование.</strong> Понимание слитной французской речи тренируется только слушанием.</li>
+    <li><strong>Произношение.</strong> Карточка не поставит вам носовые.</li>
+    <li><strong>Скорость реакции.</strong> В разговоре нет пяти секунд на вспоминание — нужна практика диалога.</li>
+    <li><strong>Чувство уместности.</strong> Что сказать чиновнику, а что другу, карточки не объяснят.</li>
+  </ul>
+
+  <p>Разумная пропорция: примерно треть времени на карточки, остальное — на слушание, чтение и говорение.</p>
+
+  <h2>Как встроить в день</h2>
+  <div class="table-wrap"><table><thead><tr><th>Когда</th><th>Сколько</th><th>Что</th></tr></thead><tbody><tr><td>Утро</td><td>10 мин</td><td>Повторения — пока память свежая</td></tr><tr><td>Обед</td><td>5 мин</td><td>Добить остаток очереди</td></tr><tr><td>Вечер</td><td>10 мин</td><td>Новые карточки + один диалог</td></tr></tbody></table></div>
+
+  <p>Главное — не длительность, а отсутствие пропусков. Пять минут в день лучше, чем час раз в неделю: интервалы рассчитаны на ежедневный ритм.</p>
+
+    <div class="cta-box">
+    <p style="font-family:Nunito,sans-serif;font-size:20px;font-weight:800;color:#fff;">Начни с 200 частотных слов</p>
+    <p style="color:#c3c3ee;font-size:16px;">Готовая колода с транскрипцией, озвучкой и примерами в контексте</p>
+    <a href="https://izifrench.lemonsqueezy.com/checkout/buy/MONTHLY_PRODUCT_ID" class="cta-btn">Начать бесплатно →</a>
+  </div>
+
+
+<h2>Частые вопросы</h2><div class="faq-list"><div class="faq-item"><h3>Что такое интервальное повторение простыми словами?</h3><p>Это система, которая показывает вам слово ровно в тот момент, когда вы вот-вот его забудете. Хорошо знакомые слова всплывают всё реже, трудные — чаще. За счёт этого вы тратите время только на то, что действительно рискуете потерять.</p></div><div class="faq-item"><h3>Сколько новых слов в день добавлять?</h3><p>Разумный старт — 10–15 новых карточек в день. При 20 новых в день через месяц накапливается около 150–200 повторений ежедневно, и большинство людей на этом сгорают. Лучше меньше, но без пропусков.</p></div><div class="faq-item"><h3>Что делать, если накопился завал повторений?</h3><p>Не пытайтесь закрыть всё за один день. Поставьте новые карточки на паузу и разбирайте по 50–70 повторений в день, пока очередь не рассосётся. Полный сброс прогресса — худшее решение: вы потеряете уже сделанную работу.</p></div><div class="faq-item"><h3>Работает ли SRS для грамматики и фраз?</h3><p>Да, но карточка должна проверять применение, а не определение. Вместо «что такое passé composé» — карточка «Я поел (avoir + manger)» с ответом «J'ai mangé». Формулируйте карточку как задачу, которую вы решаете, а не как справку.</p></div><div class="faq-item"><h3>Чем SRS лучше обычной зубрёжки?</h3><p>Экономией. Эксперименты с интервальным повторением стабильно показывают, что на удержание того же объёма материала уходит в разы меньше времени, чем при массированном повторении, — потому что вы не тратите усилия на то, что и так помните.</p></div><div class="faq-item"><h3>Можно ли учить только по карточкам?</h3><p>Нет. Карточки строят словарный запас и пассивное узнавание, но не учат слышать и говорить. Рабочая пропорция: примерно треть времени на карточки, остальное на аудирование, чтение и диалоги.</p></div></div>
+
+<div class="related-links"><h3>Читайте также</h3><ul><li><a href="/blog/kak-govorit-po-francuzski.html">Как начать говорить по-французски с нуля</a></li><li><a href="/blog/glagoly-francuzski.html">100 важнейших французских глаголов</a></li><li><a href="/blog/50-fraz-vo-francii.html">50 фраз для жизни во Франции</a></li></ul></div>
+</div>
+
+<footer style="background:#12122b;color:#aaa;text-align:center;padding:32px 24px;font-size:14px;margin-top:64px;">
+  <p style="margin-bottom:10px"><a href="https://izifrench.com" style="color:#fff;font-family:Nunito,sans-serif;font-weight:900;font-size:18px;">🇫🇷 IziFrench</a></p>
+  <p>© 2026 IziFrench — Французский язык для русскоязычных жителей Франции</p>
+  <p style="margin-top:10px"><a href="https://izifrench.com" style="color:#aaa">Главная</a> · <a href="/blog/" style="color:#aaa">Блог</a> · <a href="https://izifrench.com/privacy.html" style="color:#aaa">Конфиденциальность</a></p>
+</footer>
+<script>
+if(new URLSearchParams(location.search).get("ref")==="cabinet"){
+  document.head.insertAdjacentHTML("beforeend","<style>.cta-box{display:none!important}nav a[href*=\"lemonsqueezy\"]{display:none!important}<\/style>");
+  document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("a[href*=\"lemonsqueezy\"]").forEach(function(a){var d=a.closest("div");if(d)d.style.display="none";});});
+}
+</script>
+</body>
+</html>

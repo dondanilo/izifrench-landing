@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=XXXXXXX', 'ym');
+    ym(XXXXXXX, 'init', {ssr:true, webvisor:true, clickmap:true, accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/XXXXXXX" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Французский алфавит и чтение: буквы, диграфы, немые окончания | IziFrench</title>
+  <meta name="description" content="Французский алфавит с произношением, диакритические знаки, буквосочетания, носовые гласные и правило немых окончаний. Всё, что нужно, чтобы прочитать первое французское слово правильно.">
+  <link rel="canonical" href="https://izifrench.com/blog/francuzski-alfavit.html">
+  <meta property="og:title" content="Французский алфавит и чтение: буквы, диграфы, немые окончания">
+  <meta property="og:description" content="Французский алфавит с произношением, диакритические знаки, буквосочетания, носовые гласные и правило немых окончаний. Всё, что нужно, чтобы прочитать первое французское слово правильно.">
+  <meta property="og:url" content="https://izifrench.com/blog/francuzski-alfavit.html">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://izifrench.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.75; color: #333; background: #fff; }
+    .content { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+    h1 { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 38px; line-height: 1.2; color: #1a1a2e; margin: 32px 0 16px; }
+    h2 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 26px; margin-top: 48px; margin-bottom: 16px; color: #1a1a2e; }
+    h3 { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 20px; color: #1a1a2e; margin: 32px 0 12px; }
+    p { margin-bottom: 16px; }
+    a { color: #000091; }
+    ul, ol { padding-left: 24px; margin-bottom: 16px; }
+    li { margin-bottom: 8px; }
+    .breadcrumb { font-size: 14px; color: #888; margin: 20px 0 8px; }
+    .breadcrumb a { color: #888; text-decoration: none; }
+    .breadcrumb a:hover { color: #000091; }
+    .reading-time { display: inline-block; background: #E8E8F7; color: #000091; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .toc { background: #f8f9fa; border-radius: 12px; padding: 20px 24px; margin: 32px 0; }
+    .toc h3 { margin: 0 0 12px; font-size: 17px; }
+    .toc ol { margin: 0; }
+    table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 16px; }
+    thead th { background: #000091; color: white; padding: 12px 16px; text-align: left; font-family: 'Nunito', sans-serif; font-weight: 700; }
+    tbody tr:nth-child(odd) { background: #f8f9fa; }
+    tbody tr:nth-child(even) { background: white; }
+    tbody td { padding: 10px 16px; border-bottom: 1px solid #eee; }
+    tbody td:first-child { font-size: 18px; font-weight: 700; color: #000091; font-family: 'Nunito', sans-serif; }
+    .table-wrap { overflow-x: auto; }
+    .phrase-card { border-left: 4px solid #000091; background: #f8f9fa; padding: 16px 20px; margin: 16px 0; border-radius: 0 8px 8px 0; }
+    .phrase-card .fr { font-size: 19px; font-weight: 600; color: #1a1a2e; }
+    .phrase-card .transcription { color: #000091; font-style: italic; font-size: 15px; }
+    .phrase-card .translation { color: #333; }
+    .info-box { background: #E8E8F7; border: 1px solid #b9b9e6; border-radius: 12px; padding: 20px 24px; margin: 32px 0; }
+    .info-box h3 { margin-top: 0; color: #000091; }
+    .warning-box { background: #fff1f1; border: 1px solid #f5b8bc; border-radius: 12px; padding: 20px 24px; margin: 32px 0; }
+    .warning-box h3 { margin-top: 0; color: #a02020; }
+    .cta-box { background: linear-gradient(135deg, #000091 0%, #3D3DD1 100%); border-radius: 16px; padding: 32px; text-align: center; margin: 48px 0; }
+    .cta-box p { margin-bottom: 16px; color: #dcdcf5; }
+    .cta-btn { background: #fff; color: #000091; padding: 14px 32px; border-radius: 50px; font-family: 'Nunito', sans-serif; font-weight: 800; text-decoration: none; font-size: 17px; display: inline-block; }
+    .faq-list { margin: 24px 0; }
+    .faq-item { border-left: 3px solid #000091; padding: 4px 0 4px 20px; margin-bottom: 24px; }
+    .faq-item h3 { margin: 0 0 8px; font-size: 18px; }
+    .faq-item p { margin: 0; color: #444; }
+    .related-links { background: #f8f9fa; border-radius: 12px; padding: 24px; margin: 48px 0; }
+    .related-links h3 { margin-top: 0; }
+    @media (max-width: 600px) { h1 { font-size: 28px; } table { font-size: 14px; } tbody td:first-child { font-size: 15px; } }
+</style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Французский алфавит и чтение: буквы, диграфы, немые окончания",
+      "description": "Французский алфавит с произношением, диакритические знаки, буквосочетания, носовые гласные и правило немых окончаний. Всё, что нужно, чтобы прочитать первое французское слово правильно.",
+      "url": "https://izifrench.com/blog/francuzski-alfavit.html",
+      "datePublished": "2026-09-08",
+      "dateModified": "2026-09-08",
+      "inLanguage": "ru",
+      "author": {
+        "@type": "Organization",
+        "name": "IziFrench"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "IziFrench",
+        "url": "https://izifrench.com"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Сколько букв во французском алфавите?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "26 букв — те же, что в английском. Но к ним добавляются пять диакритических знаков (accent aigu, accent grave, accent circonflexe, tréma, cédille) и два лигатурных знака œ и æ. Отдельными буквами алфавита они не считаются, в словаре é стоит там же, где e."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Почему французские слова пишутся длиннее, чем звучат?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Французская орфография законсервировала написание XII–XIII веков, когда все эти буквы действительно произносились. Язык изменился, письмо осталось. Поэтому beaucoup из восьми букв читается в три звука — БОКУ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какие буквы на конце слова не читаются?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Как правило не читаются e, s, t, d, x, z, p, g. Читаются обычно c, r, f, l — их запоминают по слову-подсказке CaReFuL. Исключений хватает (например, в глаголах на -er конечное r молчит), но правило закрывает большинство случаев."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Что такое liaison и обязательна ли она?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Liaison — это связывание немой конечной согласной со следующим словом, которое начинается с гласной: les amis звучит как ЛЕЗ-АМИ. Часть связываний обязательна (после артиклей, местоимений, кратких прилагательных), часть запрещена (после et, перед h aspiré). В разговорной речи необязательные liaison чаще опускают."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Куда падает ударение во французском?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Всегда на последний произносимый слог слова, а в потоке речи — на последний слог смысловой группы. Отдельные слова внутри фразы ударения фактически теряют. Для русского уха это главная перестройка: не надо искать ударный слог, надо ритмически тянуть конец фразы."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько времени уходит на то, чтобы научиться читать по-французски?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Правил чтения около двадцати, и они почти без исключений. При 20–30 минутах в день большинство читает незнакомые слова вслух правильно уже через неделю-полторы. Это самая быстроокупаемая часть французского: один раз выучил — работает всегда."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "IziFrench",
+          "item": "https://izifrench.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Блог",
+          "item": "https://izifrench.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Французский алфавит и чтение: буквы, диграфы, немые окончания",
+          "item": "https://izifrench.com/blog/francuzski-alfavit.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+<nav style="background:white;border-bottom:1px solid #e5e5e5;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;">
+  <a href="https://izifrench.com" style="font-family:Nunito,sans-serif;font-weight:900;font-size:22px;color:#1a1a2e;text-decoration:none;">🇫🇷 IziFrench</a>
+  <a href="https://izifrench.lemonsqueezy.com/checkout/buy/MONTHLY_PRODUCT_ID" style="background:#000091;color:#fff;padding:10px 20px;border-radius:50px;font-family:Nunito,sans-serif;font-weight:700;text-decoration:none;font-size:15px;">Попробовать бесплатно</a>
+</nav>
+
+<div class="content">
+  <div class="breadcrumb">
+    <a href="https://izifrench.com">IziFrench</a> › <a href="/blog/">Блог</a> › Французский алфавит и чтение: буквы, диграфы, немые окончания
+  </div>
+
+  <h1>Французский алфавит и чтение: буквы, диграфы, немые окончания</h1>
+  <span class="reading-time">⏱ 11 минут чтения</span>
+
+  <p>Французское письмо пугает ровно один раз — пока не понимаешь его логику. Кажется, что букв в слове вдвое больше, чем звуков, и что читается всё как попало. На самом деле французское чтение <strong>строго регулярно</strong>: правил около двадцати, исключений мало, и, в отличие от английского, зная написание, вы почти всегда знаете произношение.</p>
+
+  <p>Эта статья — та самая база, которую нужно закрыть в первую неделю. Дальше любое новое слово вы сможете прочитать вслух сами, не залезая в словарь.</p>
+
+  <div class="toc"><h3>Что в статье</h3><ol><li>Алфавит: 26 букв и их названия</li><li>Диакритические знаки: пять крючков</li><li>Главный принцип: пишем много, читаем мало</li><li>Гласные и буквосочетания</li><li>Носовые гласные — звук, которого нет в русском</li><li>Согласные: что читается не так</li><li>Немые окончания и правило CaReFuL</li><li>Liaison: слова склеиваются</li><li>Ударение: его почти нет</li><li>Как отработать чтение за неделю</li></ol></div>
+
+  <h2>Алфавит: 26 букв и их названия</h2>
+  <p>Буквы те же, что в английском, но называются иначе. Названия нужны реально: во Франции вас будут постоянно просить продиктовать фамилию по буквам — в банке, в префектуре, у врача.</p>
+
+  <div class="table-wrap"><table><thead><tr><th>Буква</th><th>Название</th><th>Буква</th><th>Название</th></tr></thead><tbody><tr><td>A a</td><td>А</td><td>N n</td><td>ЭН</td></tr><tr><td>B b</td><td>БЭ</td><td>O o</td><td>О</td></tr><tr><td>C c</td><td>СЭ</td><td>P p</td><td>ПЭ</td></tr><tr><td>D d</td><td>ДЭ</td><td>Q q</td><td>КЮ</td></tr><tr><td>E e</td><td>Ё</td><td>R r</td><td>ЭР</td></tr><tr><td>F f</td><td>ЭФ</td><td>S s</td><td>ЭС</td></tr><tr><td>G g</td><td>ЖЭ</td><td>T t</td><td>ТЭ</td></tr><tr><td>H h</td><td>АШ</td><td>U u</td><td>Ю</td></tr><tr><td>I i</td><td>И</td><td>V v</td><td>ВЭ</td></tr><tr><td>J j</td><td>ЖИ</td><td>W w</td><td>ДУБЛЬ-ВЭ</td></tr><tr><td>K k</td><td>КА</td><td>X x</td><td>ИКС</td></tr><tr><td>L l</td><td>ЭЛЬ</td><td>Y y</td><td>И ГРЭК</td></tr><tr><td>M m</td><td>ЭМ</td><td>Z z</td><td>ЗЭД</td></tr></tbody></table></div>
+
+  <div class="info-box"><h3>💡 Продиктовать фамилию</h3><p>Фраза, которая понадобится в первый же месяц: <strong>«Je vous épelle»</strong> (ЖЁ ВУ ЗЕПЭЛЬ) — «я продиктую по буквам». Французы часто уточняют букву через имя: «M comme Marie» — «M как в слове Marie». Полезно заранее решить, как вы диктуете свою фамилию.</p></div>
+
+  <h2>Диакритические знаки: пять крючков</h2>
+  <p>Значки над буквами — не украшение. Они меняют звук, а иногда и смысл слова.</p>
+
+  <div class="table-wrap"><table><thead><tr><th>Знак</th><th>Пример</th><th>Что делает</th></tr></thead><tbody><tr><td>é (accent aigu)</td><td>café</td><td>Закрытое Э, как в русском «эти». Только над e</td></tr><tr><td>è, à, ù (accent grave)</td><td>mère, à, où</td><td>Открытое Э; над a и u различает слова: a/à, ou/où</td></tr><tr><td>ê, î, ô (circonflexe)</td><td>fête, hôtel</td><td>Чаще всего след исчезнувшей s: hôtel = hostel, forêt = forest</td></tr><tr><td>ë, ï, ü (tréma)</td><td>Noël, maïs</td><td>Читать гласные раздельно, а не как диграф: Noël = НО-ЭЛЬ</td></tr><tr><td>ç (cédille)</td><td>français</td><td>Заставляет c звучать как С перед a, o, u</td></tr></tbody></table></div>
+
+  <p>Практический вывод про circonflexe: если во французском слове «домик» над гласной, попробуйте мысленно вставить туда s — часто получится знакомое английское или русское слово. <em>Forêt</em> — forest, <em>hôpital</em> — hospital, <em>île</em> — isle.</p>
+
+  <h2>Главный принцип: пишем много, читаем мало</h2>
+  <p>Французская орфография замерла примерно в XIII веке, а произношение с тех пор упростилось. Отсюда главный эффект: <strong>количество букв почти всегда больше количества звуков</strong>.</p>
+
+  <div class="table-wrap"><table><thead><tr><th>Написание</th><th>Букв</th><th>Звучит</th><th>Звуков</th></tr></thead><tbody><tr><td>beaucoup</td><td>8</td><td>БОКУ</td><td>4</td></tr><tr><td>oiseaux</td><td>7</td><td>УАЗО</td><td>4</td></tr><tr><td>aujourd'hui</td><td>11</td><td>ОЖУРДЮИ</td><td>6</td></tr><tr><td>parlent</td><td>7</td><td>ПАРЛЬ</td><td>4</td></tr><tr><td>temps</td><td>5</td><td>ТАН</td><td>2</td></tr></tbody></table></div>
+
+  <p>Как только вы принимаете это как норму, страх перед длинными словами исчезает. Слово <em>parlent</em> и слово <em>parle</em> звучат одинаково — окончание -ent у глаголов не читается вовсе.</p>
+
+  <h2>Гласные и буквосочетания</h2>
+  <p>Половина французского чтения — это диграфы: две-три буквы дают один звук. Выучите таблицу ниже, и большинство слов перестанут быть загадкой.</p>
+
+  <div class="table-wrap"><table><thead><tr><th>Сочетание</th><th>Звук</th><th>Пример</th><th>Как звучит</th></tr></thead><tbody><tr><td>ou</td><td>У</td><td>bonjour</td><td>БОНЖУР</td></tr><tr><td>oi</td><td>УА</td><td>moi, boire</td><td>МУА, БУАР</td></tr><tr><td>eau, au</td><td>О</td><td>beau, chaud</td><td>БО, ШО</td></tr><tr><td>ai, ei</td><td>Э</td><td>maison, neige</td><td>МЭЗОН, НЭЖ</td></tr><tr><td>eu, œu</td><td>Ё (губы трубочкой)</td><td>deux, sœur</td><td>ДЁ, СЁР</td></tr><tr><td>u</td><td>Ю (острое)</td><td>tu, rue</td><td>ТЮ, РЮ</td></tr><tr><td>ui</td><td>ЮИ</td><td>huit, nuit</td><td>ЮИТ, НЮИ</td></tr><tr><td>ill</td><td>ИЙ</td><td>famille, fille</td><td>ФАМИЙ, ФИЙ</td></tr><tr><td>y между гласными</td><td>ЙЙ</td><td>voyage</td><td>ВУАЙАЖ</td></tr></tbody></table></div>
+
+  <div class="warning-box"><h3>⚠️ ou и u — разные звуки</h3><p>Это ошибка номер один у русскоязычных. <strong>ou</strong> — обычное русское У (bonjour). <strong>u</strong> — звук между У и Ю: губы вытянуты для У, а язык стоит как для И. Пара <em>tu</em> (ты) и <em>tout</em> (всё) различается только этим. Ещё показательнее: <em>dessus</em> (сверху) и <em>dessous</em> (снизу).</p></div>
+
+  <h2>Носовые гласные — звук, которого нет в русском</h2>
+  <p>Когда после гласной стоит <strong>n</strong> или <strong>m</strong>, и за ними не идёт ещё одна гласная, согласная не произносится — вместо этого гласная становится носовой. Воздух идёт через нос, «н» на конце не выговаривается.</p>
+
+  <div class="table-wrap"><table><thead><tr><th>Сочетание</th><th>Условно по-русски</th><th>Пример</th></tr></thead><tbody><tr><td>an, am, en, em</td><td>АН (носовое)</td><td>enfant, temps, chambre</td></tr><tr><td>on, om</td><td>ОН (носовое)</td><td>bonjour, nom, tomber</td></tr><tr><td>in, im, ain, ein, un</td><td>ЭН (носовое)</td><td>vin, pain, matin, brun</td></tr><tr><td>ien</td><td>ЬЕН</td><td>bien, rien, combien</td></tr></tbody></table></div>
+
+  <p>Проверка простая: зажмите нос пальцами и произнесите <em>bon</em>. Если звук изменился и «застрял» — вы сделали носовой правильно. Если нет, вы сказали русское «бон» с согласной на конце.</p>
+
+  <div class="info-box"><h3>💡 Когда n читается обычно</h3><p>Если за n или m идёт гласная либо вторая такая же согласная, носового нет: <em>bonne</em> (БОН, с чётким Н), <em>ami</em>, <em>animal</em>, <em>homme</em>. Сравните: <em>bon</em> (носовое) и <em>bonne</em> (обычное Н) — это мужской и женский род одного прилагательного.</p></div>
+
+  <h2>Согласные: что читается не так</h2>
+  <div class="table-wrap"><table><thead><tr><th>Буква</th><th>Правило</th><th>Пример</th></tr></thead><tbody><tr><td>c</td><td>Перед e, i, y — С; перед a, o, u — К</td><td>cinéma (СИНЕМА), café (КАФЕ)</td></tr><tr><td>g</td><td>Перед e, i, y — Ж; иначе — Г</td><td>gare (ГАР), général (ЖЕНЕРАЛЬ)</td></tr><tr><td>h</td><td>Не читается никогда</td><td>hôtel (ОТЭЛЬ), heure (ЁР)</td></tr><tr><td>j</td><td>Всегда Ж</td><td>je, jour, jamais</td></tr><tr><td>r</td><td>Гортанный, «картавый»</td><td>rue, Paris, merci</td></tr><tr><td>s</td><td>Между гласными — З, иначе С</td><td>maison (МЭЗОН), salut (САЛЮ)</td></tr><tr><td>ch</td><td>Ш</td><td>chat (ША), chercher (ШЕРШЕ)</td></tr><tr><td>gn</td><td>НЬ</td><td>montagne (МОНТАНЬ)</td></tr><tr><td>qu</td><td>К</td><td>qui (КИ), quatre (КАТР)</td></tr><tr><td>th</td><td>Т</td><td>théâtre (ТЕАТР)</td></tr></tbody></table></div>
+
+  <p>Про французское <strong>r</strong>: его не надо ставить специально. Скажите русское «х» на выдохе и добавьте голос — получится близко. Даже если ваш r останется русским, вас поймут; это не тот звук, ради которого стоит стопорить обучение.</p>
+
+    <div class="cta-box">
+    <p style="font-family:Nunito,sans-serif;font-size:20px;font-weight:800;color:#fff;">Отработай чтение вслух в приложении</p>
+    <p style="color:#c3c3ee;font-size:16px;">Каждое слово озвучено носителем, есть транскрипция и распознавание речи</p>
+    <a href="https://izifrench.lemonsqueezy.com/checkout/buy/MONTHLY_PRODUCT_ID" class="cta-btn">Начать бесплатно →</a>
+  </div>
+
+  <h2>Немые окончания и правило CaReFuL</h2>
+  <p>Конечные согласные во французском обычно молчат. Исключение запоминают по английскому слову <strong>CaReFuL</strong> — согласные <strong>c, r, f, l</strong> на конце чаще всего читаются.</p>
+
+  <div class="table-wrap"><table><thead><tr><th>Не читается</th><th>Пример</th><th>Читается</th><th>Пример</th></tr></thead><tbody><tr><td>-e</td><td>dame → ДАМ</td><td>-c</td><td>avec → АВЕК</td></tr><tr><td>-s</td><td>les → ЛЕ</td><td>-r</td><td>bonjour → БОНЖУР</td></tr><tr><td>-t</td><td>petit → ПЁТИ</td><td>-f</td><td>neuf → НЁФ</td></tr><tr><td>-d</td><td>grand → ГРАН</td><td>-l</td><td>hôtel → ОТЭЛЬ</td></tr><tr><td>-x</td><td>deux → ДЁ</td><td></td><td></td></tr><tr><td>-ent (у глаголов)</td><td>ils parlent → ИЛЬ ПАРЛЬ</td><td></td><td></td></tr></tbody></table></div>
+
+  <p>У правила CaReFuL есть большая дыра — окончание глаголов <strong>-er</strong>. В <em>parler</em>, <em>manger</em>, <em>aller</em> конечное r не читается: ПАРЛЕ, МАНЖЕ, АЛЕ. Это самая частая группа глаголов, так что исключение придётся принять сразу.</p>
+
+  <h2>Liaison: слова склеиваются</h2>
+  <p>Немая согласная на конце слова оживает, если следующее слово начинается с гласной. Это и есть liaison — то, из-за чего французская речь кажется сплошным потоком без пауз.</p>
+
+    <div class="phrase-card">
+    <div class="fr">les amis</div>
+    <div class="transcription">ЛЕЗ-АМИ</div>
+    <div class="translation">друзья — s зазвучала как З</div>
+  </div>
+    <div class="phrase-card">
+    <div class="fr">vous avez</div>
+    <div class="transcription">ВУЗ-АВЕ</div>
+    <div class="translation">у вас есть</div>
+  </div>
+    <div class="phrase-card">
+    <div class="fr">un petit enfant</div>
+    <div class="transcription">ЭН ПЁТИ-Т-АНФАН</div>
+    <div class="translation">маленький ребёнок — t ожила</div>
+  </div>
+    <div class="phrase-card">
+    <div class="fr">nous habitons</div>
+    <div class="transcription">НУЗ-АБИТОН</div>
+    <div class="translation">мы живём — h не мешает</div>
+  </div>
+
+  <p>Обязательная liaison — после артиклей и притяжательных (les, des, mes, mon), после местоимений перед глаголом (nous, vous, ils), после кратких прилагательных перед существительным, после предлогов en, dans, chez. Запрещённая — после <em>et</em> (никогда!) и перед словами с придыхательным h: <em>les héros</em> читается без связывания.</p>
+
+  <h2>Ударение: его почти нет</h2>
+  <p>Русский язык живёт ударением — оно различает «замо́к» и «за́мок». Во французском ударение фиксированное: всегда на последнем произносимом слоге. Более того, внутри фразы отдельные слова ударение теряют, и оно остаётся только в конце смысловой группы.</p>
+
+    <div class="phrase-card">
+    <div class="fr">Je ne comprends pas.</div>
+    <div class="transcription">ЖЁ НЁ КОМПРАН ПА</div>
+    <div class="translation">Я не понимаю — тянется последний слог</div>
+  </div>
+    <div class="phrase-card">
+    <div class="fr">Où est la gare, s'il vous plaît ?</div>
+    <div class="transcription">У Э ЛЯ ГАР, СИЛЬ ВУ ПЛЕ</div>
+    <div class="translation">Где вокзал, пожалуйста?</div>
+  </div>
+
+  <p>Отсюда практический совет: не пытайтесь произносить каждое французское слово отдельно и «правильно». Говорите группами по 3–5 слов, слегка растягивая последний слог группы. Это даёт больше «французскости», чем любая работа над отдельными звуками.</p>
+
+  <h2>Как отработать чтение за неделю</h2>
+  <p>План, который реально работает, если у вас есть 20–30 минут в день:</p>
+  <ol>
+    <li><strong>День 1–2.</strong> Алфавит вслух + диакритика. Продиктуйте свою фамилию и адрес по-французски.</li>
+    <li><strong>День 3–4.</strong> Диграфы: ou, oi, eau, ai, eu, ui. Читайте вывески и меню — их полно в интернете.</li>
+    <li><strong>День 5.</strong> Носовые. Тренируйте пары: bon/bonne, an/année, vin/vine.</li>
+    <li><strong>День 6.</strong> Немые окончания и CaReFuL. Возьмите короткий текст и вычеркните карандашом всё, что не читается.</li>
+    <li><strong>День 7.</strong> Liaison и ритм. Читайте вслух диалог целиком, не по словам, а группами.</li>
+  </ol>
+
+  <div class="info-box"><h3>💡 Проверка себя</h3><p>Возьмите незнакомое слово — например, <em>chaleureux</em> — и прочитайте его вслух до того, как услышите запись. Если получилось ШАЛЁРЁ, база у вас закрыта и можно переходить к словам и фразам.</p></div>
+
+    <div class="cta-box">
+    <p style="font-family:Nunito,sans-serif;font-size:20px;font-weight:800;color:#fff;">Начни с алфавита и первых 200 слов</p>
+    <p style="color:#c3c3ee;font-size:16px;">30-дневный план: чтение, слова, фразы и диалоги по порядку</p>
+    <a href="https://izifrench.lemonsqueezy.com/checkout/buy/MONTHLY_PRODUCT_ID" class="cta-btn">Начать бесплатно →</a>
+  </div>
+
+
+<h2>Частые вопросы</h2><div class="faq-list"><div class="faq-item"><h3>Сколько букв во французском алфавите?</h3><p>26 букв — те же, что в английском. Но к ним добавляются пять диакритических знаков (accent aigu, accent grave, accent circonflexe, tréma, cédille) и два лигатурных знака œ и æ. Отдельными буквами алфавита они не считаются, в словаре é стоит там же, где e.</p></div><div class="faq-item"><h3>Почему французские слова пишутся длиннее, чем звучат?</h3><p>Французская орфография законсервировала написание XII–XIII веков, когда все эти буквы действительно произносились. Язык изменился, письмо осталось. Поэтому beaucoup из восьми букв читается в три звука — БОКУ.</p></div><div class="faq-item"><h3>Какие буквы на конце слова не читаются?</h3><p>Как правило не читаются e, s, t, d, x, z, p, g. Читаются обычно c, r, f, l — их запоминают по слову-подсказке CaReFuL. Исключений хватает (например, в глаголах на -er конечное r молчит), но правило закрывает большинство случаев.</p></div><div class="faq-item"><h3>Что такое liaison и обязательна ли она?</h3><p>Liaison — это связывание немой конечной согласной со следующим словом, которое начинается с гласной: les amis звучит как ЛЕЗ-АМИ. Часть связываний обязательна (после артиклей, местоимений, кратких прилагательных), часть запрещена (после et, перед h aspiré). В разговорной речи необязательные liaison чаще опускают.</p></div><div class="faq-item"><h3>Куда падает ударение во французском?</h3><p>Всегда на последний произносимый слог слова, а в потоке речи — на последний слог смысловой группы. Отдельные слова внутри фразы ударения фактически теряют. Для русского уха это главная перестройка: не надо искать ударный слог, надо ритмически тянуть конец фразы.</p></div><div class="faq-item"><h3>Сколько времени уходит на то, чтобы научиться читать по-французски?</h3><p>Правил чтения около двадцати, и они почти без исключений. При 20–30 минутах в день большинство читает незнакомые слова вслух правильно уже через неделю-полторы. Это самая быстроокупаемая часть французского: один раз выучил — работает всегда.</p></div></div>
+
+<div class="related-links"><h3>Читайте также</h3><ul><li><a href="/blog/kak-govorit-po-francuzski.html">Как начать говорить по-французски с нуля</a></li><li><a href="/blog/slozhno-li-uchit-francuzski.html">Сложно ли учить французский русскому</a></li><li><a href="/blog/grammatika-francuzski.html">Грамматика французского для начинающих</a></li></ul></div>
+</div>
+
+<footer style="background:#12122b;color:#aaa;text-align:center;padding:32px 24px;font-size:14px;margin-top:64px;">
+  <p style="margin-bottom:10px"><a href="https://izifrench.com" style="color:#fff;font-family:Nunito,sans-serif;font-weight:900;font-size:18px;">🇫🇷 IziFrench</a></p>
+  <p>© 2026 IziFrench — Французский язык для русскоязычных жителей Франции</p>
+  <p style="margin-top:10px"><a href="https://izifrench.com" style="color:#aaa">Главная</a> · <a href="/blog/" style="color:#aaa">Блог</a> · <a href="https://izifrench.com/privacy.html" style="color:#aaa">Конфиденциальность</a></p>
+</footer>
+<script>
+if(new URLSearchParams(location.search).get("ref")==="cabinet"){
+  document.head.insertAdjacentHTML("beforeend","<style>.cta-box{display:none!important}nav a[href*=\"lemonsqueezy\"]{display:none!important}<\/style>");
+  document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("a[href*=\"lemonsqueezy\"]").forEach(function(a){var d=a.closest("div");if(d)d.style.display="none";});});
+}
+</script>
+</body>
+</html>
