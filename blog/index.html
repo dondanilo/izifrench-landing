@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Блог о французском языке для русскоязычных | IziFrench</title>
+  <meta name="description" content="Статьи о французском для русскоязычных во Франции: чтение, грамматика, titre de séjour, врач, банк, аренда, CAF. Без воды — только то, что работает.">
+  <link rel="canonical" href="https://izifrench.com/blog/">
+  <meta property="og:title" content="Блог о французском языке для русскоязычных">
+  <meta property="og:description" content="Статьи о французском языке для тех, кто живёт во Франции или только переехал.">
+  <meta property="og:url" content="https://izifrench.com/blog/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://izifrench.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --brand: #000091; --brand-dark: #00006E; --brand-bg: #E8E8F7; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; color: #333; background: #fff; line-height: 1.6; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid #f0f0f0; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1.2rem; color: #1a1a2e; text-decoration: none; }
+    .nav-logo span { color: var(--brand); }
+    .nav-cta { background: var(--brand); color: #fff; padding: 8px 18px; border-radius: 20px; text-decoration: none; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.9rem; transition: opacity .2s; }
+    .nav-cta:hover { opacity: .85; }
+
+    .blog-hero { background: linear-gradient(135deg, #000091 0%, #12122b 100%); padding: 64px 24px 56px; text-align: center; }
+    .blog-hero .breadcrumb { font-size: 0.85rem; color: #b3b3d9; margin-bottom: 20px; }
+    .blog-hero .breadcrumb a { color: #b3b3d9; text-decoration: none; }
+    .blog-hero .breadcrumb a:hover { color: #fff; }
+    .blog-hero h1 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: clamp(1.8rem, 5vw, 2.8rem); color: #fff; margin-bottom: 14px; }
+    .blog-hero p { color: #ccccec; font-size: 1.05rem; max-width: 560px; margin: 0 auto; }
+    .hero-badge { display: inline-block; background: #fff; color: var(--brand); font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.8rem; padding: 4px 14px; border-radius: 20px; margin-bottom: 18px; }
+
+    .categories { max-width: 900px; margin: 0 auto; padding: 48px 24px 0; }
+    .cat-title { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1.3rem; color: #1a1a2e; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+    .cat-title::after { content: ''; flex: 1; height: 2px; background: #f0f0f0; }
+
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-bottom: 48px; }
+    .card { border: 1px solid #f0f0f0; border-radius: 16px; overflow: hidden; text-decoration: none; color: inherit; transition: box-shadow .2s, transform .2s; display: flex; flex-direction: column; }
+    .card:hover { box-shadow: 0 8px 32px rgba(0,0,145,0.18); transform: translateY(-3px); }
+    .card-badge { background: var(--brand); color: #fff; font-size: 0.75rem; font-family: 'Nunito', sans-serif; font-weight: 700; padding: 4px 12px; align-self: flex-start; border-radius: 0 0 8px 0; }
+    .card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+    .card-emoji { font-size: 2rem; margin-bottom: 12px; }
+    .card-title { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1.05rem; color: #1a1a2e; margin-bottom: 8px; line-height: 1.3; }
+    .card-desc { color: #666; font-size: 0.88rem; flex: 1; }
+    .card-meta { margin-top: 16px; display: flex; align-items: center; gap: 8px; font-size: 0.8rem; color: #999; }
+    .card-meta .time { background: var(--brand-bg); color: var(--brand); padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+
+    .cta-banner { background: linear-gradient(135deg, #000091 0%, #3D3DD1 100%); border-radius: 20px; padding: 40px 32px; margin: 0 auto 60px; text-align: center; max-width: 852px; }
+    .cta-banner h2 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1.6rem; color: #fff; margin-bottom: 10px; }
+    .cta-banner p { color: rgba(255,255,255,0.8); margin-bottom: 24px; }
+    .cta-btn { display: inline-block; background: #fff; color: var(--brand); padding: 14px 36px; border-radius: 28px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1rem; text-decoration: none; transition: opacity .2s; }
+    .cta-btn:hover { opacity: .9; }
+
+    footer { background: #12122b; color: #aaa; padding: 40px 24px; text-align: center; font-size: 0.9rem; }
+    footer a { color: #ccc; text-decoration: none; }
+    footer .footer-brand { font-family: 'Nunito', sans-serif; font-size: 1.3rem; font-weight: 900; color: #fff; margin-bottom: 10px; display: block; }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "name": "Блог о французском языке для русскоязычных",
+      "url": "https://izifrench.com/blog/",
+      "inLanguage": "ru",
+      "publisher": {
+        "@type": "Organization",
+        "name": "IziFrench",
+        "url": "https://izifrench.com"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://izifrench.com/blog/francuzski-alfavit.html",
+          "name": "Французский алфавит и чтение: буквы, диграфы, немые окончания"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://izifrench.com/blog/kak-govorit-po-francuzski.html",
+          "name": "Как начать говорить по-французски с нуля: пошаговый план"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://izifrench.com/blog/slozhno-li-uchit-francuzski.html",
+          "name": "Сложно ли учить французский язык русскому? Честный ответ"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://izifrench.com/blog/francuzski-dlya-russkih.html",
+          "name": "Французский для русскоязычных: особенности, ошибки и лайфхаки"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://izifrench.com/blog/intervalnoe-povtorenie.html",
+          "name": "Интервальное повторение для изучения французского: метод SRS"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://izifrench.com/blog/50-fraz-vo-francii.html",
+          "name": "50 фраз для жизни во Франции с транскрипцией"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://izifrench.com/blog/arenda-vo-francii.html",
+          "name": "Аренда квартиры во Франции: bail, гарант и dépôt de garantie"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "url": "https://izifrench.com/blog/francuzski-u-vracha.html",
+          "name": "Французский у врача: médecin traitant, carte Vitale, аптека"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "url": "https://izifrench.com/blog/francuzski-v-banke.html",
+          "name": "Французский в банке: открыть счёт, RIB, virement"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "url": "https://izifrench.com/blog/titre-de-sejour-dokumenty.html",
+          "name": "Titre de séjour: префектура, OFII и все документы"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "url": "https://izifrench.com/blog/caf-posobiya.html",
+          "name": "CAF во Франции: APL и пособия — как подать и что говорить"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "url": "https://izifrench.com/blog/francuzski-na-rabote.html",
+          "name": "Французский на работе: деловые фразы для офиса и переговоров"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "url": "https://izifrench.com/blog/deti-shkola-franciya.html",
+          "name": "Дети и школа во Франции: французский для родителей"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "url": "https://izifrench.com/blog/francuzski-transport.html",
+          "name": "Транспорт во Франции: métro, RER, SNCF и Navigo"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "url": "https://izifrench.com/blog/francuzski-sosedi-dom.html",
+          "name": "Французский для дома и соседей: syndic, charges, ремонт"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "url": "https://izifrench.com/blog/francuzski-pokupki.html",
+          "name": "Французский в магазине: продукты, одежда, рынок"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "url": "https://izifrench.com/blog/grammatika-francuzski.html",
+          "name": "Грамматика французского языка: базовые правила для начинающих"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "url": "https://izifrench.com/blog/glagoly-francuzski.html",
+          "name": "Глаголы французского языка: 100 самых важных с транскрипцией"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "url": "https://izifrench.com/blog/chislitelnie-francuzski.html",
+          "name": "Числительные во французском: от 1 до миллиона (и почему 80 — это 4×20)"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "url": "https://izifrench.com/blog/francuzski-predlogi.html",
+          "name": "Предлоги во французском: à, de, en, pour, chez с примерами"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "url": "https://izifrench.com/blog/francuzski-voprosy.html",
+          "name": "Вопросы по-французски: est-ce que, инверсия и вопросительные слова"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "url": "https://izifrench.com/blog/vremena-goda-francuzski.html",
+          "name": "Времена года и погода по-французски: слова и фразы"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "url": "https://izifrench.com/blog/telo-cheloveka-francuzski.html",
+          "name": "Части тела по-французски: словарь с транскрипцией"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "url": "https://izifrench.com/blog/francuzski-cveta.html",
+          "name": "Цвета по-французски: полный словарь с произношением"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "url": "https://izifrench.com/blog/francuzski-semya.html",
+          "name": "Семья по-французски: члены семьи, слова и фразы"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "url": "https://izifrench.com/blog/francuzski-sport-fitnes.html",
+          "name": "Французский для спорта и фитнеса: слова для зала и бассейна"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "url": "https://izifrench.com/blog/francuzskaya-kuhnya.html",
+          "name": "Французская кухня: слова и фразы для ресторана и рынка"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "url": "https://izifrench.com/blog/prazdniki-francii.html",
+          "name": "Праздники во Франции: даты, традиции и слова"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "url": "https://izifrench.com/blog/poslovitsy-francuzski.html",
+          "name": "Пословицы и поговорки на французском с переводом"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "url": "https://izifrench.com/blog/sleng-francuzski.html",
+          "name": "Французский сленг и разговорные выражения (включая verlan)"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "IziFrench",
+          "item": "https://izifrench.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Блог",
+          "item": "https://izifrench.com/blog/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="https://izifrench.com">🇫🇷 Izi<span>French</span></a>
+  <a class="nav-cta" href="https://izifrench.lemonsqueezy.com/checkout/buy/MONTHLY_PRODUCT_ID">Попробовать бесплатно</a>
+</nav>
+
+<header class="blog-hero">
+  <div class="breadcrumb"><a href="https://izifrench.com">IziFrench</a> › Блог</div>
+  <span class="hero-badge">30 статей</span>
+  <h1>Блог о французском языке</h1>
+  <p>Для тех, кто живёт во Франции или только собирается. Чтение, грамматика, документы, врач, банк, школа — без воды.</p>
+</header>
+
+<main class="categories">
+    <h2 class="cat-title">📚 С чего начать</h2>
+    <div class="cards-grid">
+      <a class="card" href="/blog/francuzski-alfavit.html">
+        <span class="card-badge">Основы</span>
+        <div class="card-body">
+          <div class="card-emoji">🔤</div>
+          <div class="card-title">Французский алфавит и чтение: буквы, диграфы, немые окончания</div>
+          <div class="card-desc">Французский алфавит с произношением, диакритические знаки, буквосочетания, носовые гласные и правило немых окончаний. Всё, что нужно, чтобы…</div>
+          <div class="card-meta"><span class="time">⏱ 11 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/kak-govorit-po-francuzski.html">
+        <span class="card-badge">С нуля</span>
+        <div class="card-body">
+          <div class="card-emoji">📚</div>
+          <div class="card-title">Как начать говорить по-французски с нуля: пошаговый план</div>
+          <div class="card-desc">Пошаговый план для тех, кто начинает французский с нуля: что учить в первую неделю, сколько слов нужно на самом деле, как заговорить за 30…</div>
+          <div class="card-meta"><span class="time">⏱ 11 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/slozhno-li-uchit-francuzski.html">
+        <span class="card-badge">Мотивация</span>
+        <div class="card-body">
+          <div class="card-emoji">💡</div>
+          <div class="card-title">Сложно ли учить французский язык русскому? Честный ответ</div>
+          <div class="card-desc">Насколько сложен французский для русскоязычных: что даётся легко, что тяжело, сколько времени занимает каждый уровень и почему французский…</div>
+          <div class="card-meta"><span class="time">⏱ 10 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/francuzski-dlya-russkih.html">
+        <span class="card-badge">Лайфхаки</span>
+        <div class="card-body">
+          <div class="card-emoji">🇷🇺</div>
+          <div class="card-title">Французский для русскоязычных: особенности, ошибки и лайфхаки</div>
+          <div class="card-desc">Чем французский отличается от русского, какие ошибки русскоязычные делают чаще всего, какие слова обманывают (ложные друзья) и как…</div>
+          <div class="card-meta"><span class="time">⏱ 10 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/intervalnoe-povtorenie.html">
+        <span class="card-badge">Методика</span>
+        <div class="card-body">
+          <div class="card-emoji">🧠</div>
+          <div class="card-title">Интервальное повторение для изучения французского: метод SRS</div>
+          <div class="card-desc">Как работает интервальное повторение (SRS), кривая забывания Эббингауза и алгоритм SM-2. Как применять метод к французским словам, фразам и…</div>
+          <div class="card-meta"><span class="time">⏱ 10 мин</span></div>
+        </div>
+      </a>
+    </div>
+    <h2 class="cat-title">🇫🇷 Жизнь во Франции</h2>
+    <div class="cards-grid">
+      <a class="card" href="/blog/50-fraz-vo-francii.html">
+        <span class="card-badge">Фразы</span>
+        <div class="card-body">
+          <div class="card-emoji">💬</div>
+          <div class="card-title">50 фраз для жизни во Франции с транскрипцией</div>
+          <div class="card-desc">50 французских фраз, которые нужны каждый день: приветствия, магазин, кафе, транспорт, врач, администрация. С русской транскрипцией и…</div>
+          <div class="card-meta"><span class="time">⏱ 12 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/arenda-vo-francii.html">
+        <span class="card-badge">Быт</span>
+        <div class="card-body">
+          <div class="card-emoji">🏠</div>
+          <div class="card-title">Аренда квартиры во Франции: bail, гарант и dépôt de garantie</div>
+          <div class="card-desc">Как снять квартиру во Франции: словарь объявлений, что такое bail и dossier, кто такой garant и что делает Visale, état des lieux, депозит…</div>
+          <div class="card-meta"><span class="time">⏱ 12 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/francuzski-u-vracha.html">
+        <span class="card-badge">Срочное</span>
+        <div class="card-body">
+          <div class="card-emoji">🏥</div>
+          <div class="card-title">Французский у врача: médecin traitant, carte Vitale, аптека</div>
+          <div class="card-desc">Как записаться к врачу во Франции, что такое médecin traitant и carte Vitale, как описать симптомы, что говорить в аптеке и куда идти при…</div>
+          <div class="card-meta"><span class="time">⏱ 12 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/francuzski-v-banke.html">
+        <span class="card-badge">Документы</span>
+        <div class="card-body">
+          <div class="card-emoji">🏦</div>
+          <div class="card-title">Французский в банке: открыть счёт, RIB, virement</div>
+          <div class="card-desc">Как открыть счёт во французском банке: какие документы нужны, что такое RIB и IBAN, чем отличается virement от prélèvement, как читать…</div>
+          <div class="card-meta"><span class="time">⏱ 11 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/titre-de-sejour-dokumenty.html">
+        <span class="card-badge">Документы</span>
+        <div class="card-body">
+          <div class="card-emoji">📋</div>
+          <div class="card-title">Titre de séjour: префектура, OFII и все документы</div>
+          <div class="card-desc">Как получить и продлить вид на жительство во Франции: типы titre de séjour, подача через ANEF, récépissé, визит в OFII, контракт CIR и что…</div>
+          <div class="card-meta"><span class="time">⏱ 13 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/caf-posobiya.html">
+        <span class="card-badge">Документы</span>
+        <div class="card-body">
+          <div class="card-emoji">💶</div>
+          <div class="card-title">CAF во Франции: APL и пособия — как подать и что говорить</div>
+          <div class="card-desc">Что такое CAF, какие пособия можно получить во Франции: APL на жильё, prime d&#x27;activité, семейные выплаты. Как подать заявку, что такое…</div>
+          <div class="card-meta"><span class="time">⏱ 11 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/francuzski-na-rabote.html">
+        <span class="card-badge">Карьера</span>
+        <div class="card-body">
+          <div class="card-emoji">💼</div>
+          <div class="card-title">Французский на работе: деловые фразы для офиса и переговоров</div>
+          <div class="card-desc">Деловой французский: как здороваться в офисе, вести переписку, участвовать в совещании, просить отпуск и говорить с начальником. Словарь…</div>
+          <div class="card-meta"><span class="time">⏱ 11 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/deti-shkola-franciya.html">
+        <span class="card-badge">Семья</span>
+        <div class="card-body">
+          <div class="card-emoji">👨‍👩‍👧</div>
+          <div class="card-title">Дети и школа во Франции: французский для родителей</div>
+          <div class="card-desc">Как устроена школа во Франции: maternelle, école élémentaire, collège, lycée. Как записать ребёнка, что такое carnet de liaison и cantine…</div>
+          <div class="card-meta"><span class="time">⏱ 11 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/francuzski-transport.html">
+        <span class="card-badge">Транспорт</span>
+        <div class="card-body">
+          <div class="card-emoji">🚇</div>
+          <div class="card-title">Транспорт во Франции: métro, RER, SNCF и Navigo</div>
+          <div class="card-desc">Как пользоваться транспортом во Франции: метро и RER в Париже, проездной Navigo, поезда SNCF и TGV, автобусы и трамваи. Как купить билет…</div>
+          <div class="card-meta"><span class="time">⏱ 11 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/francuzski-sosedi-dom.html">
+        <span class="card-badge">Быт</span>
+        <div class="card-body">
+          <div class="card-emoji">🏘️</div>
+          <div class="card-title">Французский для дома и соседей: syndic, charges, ремонт</div>
+          <div class="card-desc">Как общаться с соседями и управляющей компанией во Франции: syndic и copropriété, charges, шум и tapage nocturne, вызов сантехника…</div>
+          <div class="card-meta"><span class="time">⏱ 10 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/francuzski-pokupki.html">
+        <span class="card-badge">Покупки</span>
+        <div class="card-body">
+          <div class="card-emoji">🛍️</div>
+          <div class="card-title">Французский в магазине: продукты, одежда, рынок</div>
+          <div class="card-desc">Как делать покупки во Франции: супермаркет, булочная, рынок и магазины одежды. Фразы для кассы, примерочной и возврата товара, словарь…</div>
+          <div class="card-meta"><span class="time">⏱ 11 мин</span></div>
+        </div>
+      </a>
+    </div>
+    <h2 class="cat-title">📖 Грамматика и словарь</h2>
+    <div class="cards-grid">
+      <a class="card" href="/blog/grammatika-francuzski.html">
+        <span class="card-badge">Грамматика</span>
+        <div class="card-body">
+          <div class="card-emoji">📖</div>
+          <div class="card-title">Грамматика французского языка: базовые правила для начинающих</div>
+          <div class="card-desc">Основы французской грамматики простыми словами: артикли, род и число, порядок слов, глаголы présent и passé composé, отрицание, вопросы и…</div>
+          <div class="card-meta"><span class="time">⏱ 12 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/glagoly-francuzski.html">
+        <span class="card-badge">Словарь</span>
+        <div class="card-body">
+          <div class="card-emoji">⚡</div>
+          <div class="card-title">Глаголы французского языка: 100 самых важных с транскрипцией</div>
+          <div class="card-desc">100 самых нужных французских глаголов с транскрипцией и переводом: три группы спряжения, неправильные глаголы, спряжение être и avoir…</div>
+          <div class="card-meta"><span class="time">⏱ 12 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/chislitelnie-francuzski.html">
+        <span class="card-badge">Словарь</span>
+        <div class="card-body">
+          <div class="card-emoji">🔢</div>
+          <div class="card-title">Числительные во французском: от 1 до миллиона (и почему 80 — это 4×20)</div>
+          <div class="card-desc">Французские числа от 0 до миллиона с транскрипцией: логика 70, 80 и 90, порядковые числительные, даты, время, цены и телефонные номера…</div>
+          <div class="card-meta"><span class="time">⏱ 10 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/francuzski-predlogi.html">
+        <span class="card-badge">Грамматика</span>
+        <div class="card-body">
+          <div class="card-emoji">🔗</div>
+          <div class="card-title">Предлоги во французском: à, de, en, pour, chez с примерами</div>
+          <div class="card-desc">Французские предлоги простыми словами: à и de, en и dans, chez, pour и par, предлоги со странами и городами, слияние с артиклями. Таблицы…</div>
+          <div class="card-meta"><span class="time">⏱ 10 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/francuzski-voprosy.html">
+        <span class="card-badge">Грамматика</span>
+        <div class="card-body">
+          <div class="card-emoji">❓</div>
+          <div class="card-title">Вопросы по-французски: est-ce que, инверсия и вопросительные слова</div>
+          <div class="card-desc">Как задавать вопросы на французском: три способа построения, вопросительные слова où, quand, comment, pourquoi, разница qu&#x27;est-ce que и…</div>
+          <div class="card-meta"><span class="time">⏱ 10 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/vremena-goda-francuzski.html">
+        <span class="card-badge">Словарь</span>
+        <div class="card-body">
+          <div class="card-emoji">🌦️</div>
+          <div class="card-title">Времена года и погода по-французски: слова и фразы</div>
+          <div class="card-desc">Времена года, месяцы, дни недели и погода по-французски с транскрипцией. Как спросить и рассказать о погоде, конструкции il fait и il y a…</div>
+          <div class="card-meta"><span class="time">⏱ 10 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/telo-cheloveka-francuzski.html">
+        <span class="card-badge">Словарь</span>
+        <div class="card-body">
+          <div class="card-emoji">🧍</div>
+          <div class="card-title">Части тела по-французски: словарь с транскрипцией</div>
+          <div class="card-desc">Части тела на французском с транскрипцией и родом: голова, руки, ноги, внутренние органы. Как описать боль врачу, выражения с частями тела…</div>
+          <div class="card-meta"><span class="time">⏱ 9 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/francuzski-cveta.html">
+        <span class="card-badge">Словарь</span>
+        <div class="card-body">
+          <div class="card-emoji">🎨</div>
+          <div class="card-title">Цвета по-французски: полный словарь с произношением</div>
+          <div class="card-desc">Цвета на французском с транскрипцией: основные и оттенки, согласование прилагательных в роде и числе, неизменяемые цвета, устойчивые…</div>
+          <div class="card-meta"><span class="time">⏱ 9 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/francuzski-semya.html">
+        <span class="card-badge">Словарь</span>
+        <div class="card-body">
+          <div class="card-emoji">👪</div>
+          <div class="card-title">Семья по-французски: члены семьи, слова и фразы</div>
+          <div class="card-desc">Члены семьи на французском с транскрипцией: родители, дети, родственники мужа и жены. Притяжательные прилагательные, как рассказать о семье…</div>
+          <div class="card-meta"><span class="time">⏱ 9 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/francuzski-sport-fitnes.html">
+        <span class="card-badge">Словарь</span>
+        <div class="card-body">
+          <div class="card-emoji">🏋️</div>
+          <div class="card-title">Французский для спорта и фитнеса: слова для зала и бассейна</div>
+          <div class="card-desc">Спортивная лексика на французском: виды спорта, тренажёрный зал, бассейн, абонемент и его расторжение, фразы для тренера и врача. С…</div>
+          <div class="card-meta"><span class="time">⏱ 9 мин</span></div>
+        </div>
+      </a>
+    </div>
+    <h2 class="cat-title">🎭 Культура и жизнь</h2>
+    <div class="cards-grid">
+      <a class="card" href="/blog/francuzskaya-kuhnya.html">
+        <span class="card-badge">Кухня</span>
+        <div class="card-body">
+          <div class="card-emoji">🍽️</div>
+          <div class="card-title">Французская кухня: слова и фразы для ресторана и рынка</div>
+          <div class="card-desc">Как читать французское меню и заказывать еду: структура обеда, степени прожарки, сыры и вино, чаевые и правила поведения в ресторане…</div>
+          <div class="card-meta"><span class="time">⏱ 12 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/prazdniki-francii.html">
+        <span class="card-badge">Культура</span>
+        <div class="card-body">
+          <div class="card-emoji">🎉</div>
+          <div class="card-title">Праздники во Франции: даты, традиции и слова</div>
+          <div class="card-desc">Календарь французских праздников: государственные выходные, Рождество, 14 июля, Пасха, Fête de la Musique. Традиции, поздравления и словарь…</div>
+          <div class="card-meta"><span class="time">⏱ 10 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/poslovitsy-francuzski.html">
+        <span class="card-badge">Культура</span>
+        <div class="card-body">
+          <div class="card-emoji">📜</div>
+          <div class="card-title">Пословицы и поговорки на французском с переводом</div>
+          <div class="card-desc">Французские пословицы и поговорки с дословным переводом и русскими аналогами: о жизни, работе, еде, деньгах и дружбе. Плюс идиомы, которые…</div>
+          <div class="card-meta"><span class="time">⏱ 9 мин</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/sleng-francuzski.html">
+        <span class="card-badge">Разговорный</span>
+        <div class="card-body">
+          <div class="card-emoji">😎</div>
+          <div class="card-title">Французский сленг и разговорные выражения (включая verlan)</div>
+          <div class="card-desc">Французский сленг: verlan и как он устроен, разговорные слова вместо литературных, сокращения в переписке, слова-паразиты и выражения…</div>
+          <div class="card-meta"><span class="time">⏱ 10 мин</span></div>
+        </div>
+      </a>
+    </div>
+
+  <div class="cta-banner">
+    <h2>Хватит читать — начни говорить</h2>
+    <p>30-дневный план, 240 слов по темам, сценарии из реальной жизни и тренировка произношения.</p>
+    <a class="cta-btn" href="https://izifrench.lemonsqueezy.com/checkout/buy/MONTHLY_PRODUCT_ID">Начать бесплатно →</a>
+  </div>
+</main>
+
+<footer>
+  <a class="footer-brand" href="https://izifrench.com">🇫🇷 IziFrench</a>
+  <p>© 2026 IziFrench — Французский язык для русскоязычных жителей Франции</p>
+  <p style="margin-top:10px"><a href="https://izifrench.com">Главная</a> · <a href="/blog/">Блог</a> · <a href="https://izifrench.com/privacy.html">Конфиденциальность</a> · <a href="https://izifrench.com/terms.html">Условия</a></p>
+</footer>
+<script>
+if(new URLSearchParams(location.search).get("ref")==="cabinet"){
+  document.head.insertAdjacentHTML("beforeend","<style>.cta-banner{display:none!important}.nav-cta{display:none!important}<\/style>");
+}
+</script>
+</body>
+</html>
